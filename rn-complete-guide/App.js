@@ -6,6 +6,7 @@ import GoalItem from './components/GoalItem';
 export default function App() {
   const [courseGoals, setCourseGoals] = useState([]);
   const [isAddMode, setIsAddMode] = useState(false);
+  console.log('RE-RENDER');
 
   const addGoalHandler = (enteredGoal) => {
     //setCourseGoals([...courseGoals, enteredGoal]);
