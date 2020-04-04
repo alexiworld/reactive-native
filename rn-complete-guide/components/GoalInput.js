@@ -8,7 +8,7 @@ const GoalInput = props => {
     }
     const addGoalHandler = () => {
         props.onAddGoal.bind(this, enteredGoal);
-        
+        setEnteredGoal('');
     }
 
     return (
@@ -23,8 +23,12 @@ const GoalInput = props => {
             <Button
                 title="ADD"
                 //onPress={() => props.onAddGoal(enteredGoal)}
-                onPress={props.onAddGoal.bind(this,enteredGoal)}
+                onPress={addGoalHandler}
             />
+            <Button
+                title="CANCEL"
+                color='red'
+                onPress={props.onCancelGoal}/>
         </View>
         </Modal>
     );
